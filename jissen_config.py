@@ -1,0 +1,14 @@
+#const
+HEIGHT = 7
+WIDTH = 3
+
+FORWARD = 1
+RIGHT = 2
+BACK = 3
+LEFT = 4
+
+KEY_EDGE_WEIGHT = 'weight'
+UNVISITED_EDGE_WEIGHT = 1
+VISITED_EDGE_WEIGHT = 2
+
+KEY_VISIT_FREQ = 'visit_frequency'
