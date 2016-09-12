@@ -5,7 +5,7 @@ import jissen_config
 
 class Path:
 	def __init__(self):
-		self.field = nx.grid_2d_graph(jissen_config.HEIGHT,jissen_config.WIDTH) 
+		self.field = nx.grid_2d_graph(jissen_config.WIDTH,jissen_config.HEIGHT) 
 		self.shut_nodes_set = set()					
 		
 			
@@ -27,7 +27,7 @@ class Path:
 		#hamidasanaika
 		def check_neighbour(neighbour):
 			i,j = neighbour
-			if i<0 or j<0 or i>=jissen_config.HEIGHT or j>= jissen_config.WIDTH:
+			if i<0 or j<0 or i>=jissen_config.WIDTH or j>= jissen_config.HEIGHT:
 				return False
 			else:
 				return True
@@ -47,7 +47,7 @@ class Path:
 			s_path = nx.shortest_path(self.field,source=source,target=target)
 		except nx.NetworkXNoPath:
 			print "no path"
-			return 0
+			return [(-1,-1)]
 			
 		return s_path
 	
